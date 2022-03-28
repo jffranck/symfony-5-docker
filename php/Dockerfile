@@ -1,7 +1,7 @@
 FROM php:7.4-cli
 
 RUN apt update \
-    && apt install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip npm \
+    && apt install -y zlib1g-dev g++ git libicu-dev libxslt1-dev libzip-dev zip npm \
     && docker-php-ext-install intl opcache pdo pdo_mysql xsl \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
